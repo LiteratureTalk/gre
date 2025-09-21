@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Act Belong Commit</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <style>
+    :root {
+      --abc-purple:#7f3b96;
+      --abc-green:#0eaa54;
+      --abc-blue:#079eda;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f9fafb;
+      color: #111;
+      scroll-behavior: smooth;
+    }
+    .gradient-text {
+      background: linear-gradient(90deg, var(--abc-purple), var(--abc-blue));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .liquid-bg {
+      background: linear-gradient(120deg, var(--abc-purple), var(--abc-blue), var(--abc-green));
+      background-size: 200% 200%;
+      animation: moveGradient 10s ease infinite;
+    }
+    @keyframes moveGradient {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+    .glass-card {
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 1.5rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .glass-card:hover {
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: 0 15px 25px rgba(0,0,0,0.15);
+    }
+  </style>
+</head>
+<body class="antialiased">
+  <!-- Hero -->
+  <section class="liquid-bg min-h-screen flex flex-col justify-center items-center text-center p-6">
+    <h1 class="text-6xl font-extrabold mb-6 gradient-text drop-shadow-lg" data-aos="fade-up">Act • Belong • Commit</h1>
+    <p class="max-w-2xl text-lg mb-10 text-white/90" data-aos="fade-up" data-aos-delay="150">A mental health promotion campaign encouraging individuals to take action, connect with others, and commit to meaningful activities for stronger wellbeing.</p>
+    <a href="#activities" class="bg-white/20 backdrop-blur-md border border-white/40 text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:scale-105 transition" data-aos="fade-up" data-aos-delay="300">Explore Activities</a>
+  </section>
+
+  <!-- Aim Section -->
+  <section class="py-20 px-6 text-center bg-white/60 backdrop-blur-lg">
+    <h2 class="text-4xl font-bold mb-6 gradient-text" data-aos="fade-up">Aim of the Promotion</h2>
+    <p class="max-w-3xl mx-auto text-lg text-gray-700" data-aos="fade-up" data-aos-delay="150">The aim of <strong>Act-Belong-Commit</strong> is to build mental wellbeing by encouraging people to stay active in body and mind, connect with others, and commit to causes or goals that provide purpose and meaning.</p>
+  </section>
+
+  <!-- Activities -->
+  <section id="activities" class="py-20 px-6 bg-gradient-to-r from-[var(--abc-green)]/10 via-white to-[var(--abc-blue)]/10">
+    <h2 class="text-4xl font-bold text-center mb-12 gradient-text" data-aos="fade-up">Ways to Get Involved</h2>
+    <div class="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+      <!-- Act -->
+      <div class="glass-card p-8" data-aos="fade-up">
+        <div class="text-[var(--abc-green)] mb-4 text-4xl">🏃‍♂️</div>
+        <h3 class="text-2xl font-bold mb-4">Act</h3>
+        <p class="text-gray-100 mb-4">Keep mentally, physically, and socially active.</p>
+        <ul class="space-y-2 text-gray-200">
+          <li>Go for a daily walk, jog, or cycle</li>
+          <li>Try yoga, dancing, or swimming</li>
+          <li>Read books, write stories, or play music</li>
+          <li>Learn a new recipe or craft</li>
+          <li>Do brain games like chess or crosswords</li>
+        </ul>
+      </div>
+      <!-- Belong -->
+      <div class="glass-card p-8" data-aos="fade-up" data-aos-delay="150">
+        <div class="text-[var(--abc-blue)] mb-4 text-4xl">🤝</div>
+        <h3 class="text-2xl font-bold mb-4">Belong</h3>
+        <p class="text-gray-100 mb-4">Connect with family, friends, and community.</p>
+        <ul class="space-y-2 text-gray-200">
+          <li>Join a sports team or fitness group</li>
+          <li>Volunteer at local events</li>
+          <li>Attend community markets or festivals</li>
+          <li>Host a dinner with friends or neighbours</li>
+          <li>Participate in cultural or faith groups</li>
+        </ul>
+      </div>
+      <!-- Commit -->
+      <div class="glass-card p-8" data-aos="fade-up" data-aos-delay="300">
+        <div class="text-[var(--abc-purple)] mb-4 text-4xl">🌱</div>
+        <h3 class="text-2xl font-bold mb-4">Commit</h3>
+        <p class="text-gray-100 mb-4">Do things that provide purpose and meaning.</p>
+        <ul class="space-y-2 text-gray-200">
+          <li>Set and achieve personal goals</li>
+          <li>Support a charity or cause</li>
+          <li>Take on a creative or study project</li>
+          <li>Mentor or coach someone</li>
+          <li>Grow a garden or care for pets</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-6 text-center liquid-bg text-white">
+    <p class="text-sm">© 2025 Act Belong Commit • Promoting Mental Wellbeing</p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true
+    });
+  </script>
+</body>
+</html>
