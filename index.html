@@ -79,65 +79,6 @@
             66% { transform: translate(-20px, 20px) scale(0.9); }
         }
 
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            padding: 20px 40px;
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border-bottom: 1px solid var(--glass-border);
-            z-index: 1000;
-            transition: all 0.3s ease;
-        }
-
-        nav.scrolled {
-            padding: 15px 40px;
-            background: rgba(255, 255, 255, 0.08);
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 16px;
-            transition: all 0.3s ease;
-            padding: 8px 16px;
-            border-radius: 20px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        nav a::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 0;
-            height: 100%;
-            background: rgba(255, 255, 255, 0.1);
-            transition: width 0.3s ease;
-            border-radius: 20px;
-        }
-
-        nav a:hover::before {
-            width: 100%;
-        }
-
-        nav a:hover {
-            transform: translateY(-2px);
-            text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
-        }
-
         /* Container */
         .container {
             max-width: 1200px;
